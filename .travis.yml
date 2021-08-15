@@ -8,11 +8,7 @@ python:
 services:
   postgresql
 addons:
-  postgresql: '13'
-  apt:
-    packages:
-      - postgresql-13
-      - postgresql-client-13
+  postgresql: '9.5'
 
 env:
   global:
