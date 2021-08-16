@@ -13,7 +13,6 @@ DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
-COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -107,6 +106,7 @@ if AWS_ACCESS_KEY_ID:
     AWS_QUERYSTRING_AUTH = True
     AWS_S3_CUSTOM_DOMAIN = None
     COLLECTFAST_ENABLED = True
+    COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
     AWS_DEFAULT_ACL = 'private'
 
     # Static Assets
